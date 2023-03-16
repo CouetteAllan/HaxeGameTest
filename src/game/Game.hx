@@ -36,10 +36,12 @@ class Game extends AppChildProcess {
 		scroller = new h2d.Layers();
 		root.add(scroller, Const.DP_BG);
 		scroller.filter = new h2d.filter.Nothing(); // force rendering for pixel perfect
+		new en.Hero(5,5);
 
 		fx = new Fx();
 		hud = new ui.Hud();
 		camera = new Camera();
+
 
 		startLevel(Assets.worldData.all_levels.FirstLevel);
 	}

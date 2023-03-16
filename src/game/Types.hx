@@ -26,6 +26,7 @@ enum abstract GameAction(Int) to Int {
 /** Entity state machine. Each entity can only have 1 active State at a time. **/
 enum abstract State(Int) {
 	var Normal;
+	var Angry;
 }
 
 
@@ -48,4 +49,12 @@ enum abstract SlowMoId(Int) to Int {
 
 enum abstract ChargedActionId(Int) to Int {
 	var CA_Unknown;
+}
+
+interface IDamageable {
+	
+}
+
+interface IHealth {
+	
 }

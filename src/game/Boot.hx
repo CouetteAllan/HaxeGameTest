@@ -25,7 +25,7 @@ class Boot extends hxd.App {
 		Called when engine is ready, actual app can start
 	**/
 	override function init() {
-		new App(s2d);
+		new App(s2d); //charge the app with a default 2D scene
 		onResize();
 	}
 

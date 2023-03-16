@@ -29,12 +29,12 @@ class SamplePlayer extends Entity {
 		vBase.setFricts(0.84, 0.94);
 
 		// Camera tracks this
-		camera.trackEntity(this, true);
+		camera.trackEntity(this, false);
 		camera.clampToLevelBounds = true;
 
 		// Init controller
-		ca = App.ME.controller.createAccess();
-		ca.lockCondition = Game.isGameControllerLocked;
+		//ca = App.ME.controller.createAccess();
+		//ca.lockCondition = Game.isGameControllerLocked;
 
 		// Placeholder display
 		var b = new h2d.Bitmap( h2d.Tile.fromColor(Green, iwid, ihei), spr );
