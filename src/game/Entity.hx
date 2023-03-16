@@ -1,4 +1,4 @@
-class Entity {
+class Entity{
     public static var ALL : FixedArray<Entity> = new FixedArray(1024);
     public static var GC : FixedArray<Entity> = new FixedArray(ALL.maxSize);
 
@@ -29,6 +29,11 @@ class Entity {
 
 	/** Unique identifier **/
 	public var uid(default,null) : Int;
+
+	/**
+	 * Define wether this entity is the player or not. The flag telling this entity is the player
+	 */
+	public var playerFlag : Bool = false;
 
 	/** Grid X coordinate **/
     public var cx = 0;
@@ -117,7 +122,8 @@ class Entity {
 	public var life(default,null) : dn.struct.Stat<Int>;
 	/** Last source of damage if it was an Entity **/
 	public var lastDmgSource(default,null) : Null<Entity>;
-
+	/** Damage value of the entity **/
+	public var damage : Int;
 	/** Horizontal direction (left=-1 or right=1): from "last source of damage" to "this" **/
 	public var lastHitDirFromSource(get,never) : Int;
 	inline function get_lastHitDirFromSource() return lastDmgSource==null ? -dir : -dirTo(lastDmgSource);
@@ -254,6 +260,8 @@ class Entity {
 	public function initLife(v) {
 		life.initMaxOnMax(v);
 	}
+
+	
 
 	/** Inflict damage **/
 	public function hit(dmg:Int, from:Null<Entity>) {
@@ -828,4 +836,6 @@ class Entity {
 	**/
     public function frameUpdate() {
     }
+
+
 }

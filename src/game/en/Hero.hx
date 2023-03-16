@@ -9,7 +9,7 @@ class Hero extends Entity{
     public function new(x,y){
         super(x,y);
 
-
+        playerFlag = true;
         //default rendering for the character
         var g = new h2d.Graphics(spr);
         g.beginFill(0xff0000);
@@ -17,6 +17,9 @@ class Hero extends Entity{
 
         ca = App.ME.controller.createAccess();
         ca.lockCondition = Game.isGameControllerLocked;
+
+        initLife(100);
+        damage = 10;
 
     }
 
@@ -36,6 +39,8 @@ class Hero extends Entity{
 
     override function fixedUpdate() {
         super.fixedUpdate();
+
+        vBase.dx *= 0.9;
 
         if(speed!=0){
             vBase.dx += speed * 0.045;

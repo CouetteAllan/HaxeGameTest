@@ -33,6 +33,9 @@ enum abstract State(Int) {
 /** Entity Affects have a limited duration in time and you can stack different affects. **/
 enum abstract Affect(Int) {
 	var Stun;
+	var Poison;
+	var Healing;
+	var Ice;
 }
 
 enum abstract LevelMark(Int) to Int {
@@ -52,9 +55,9 @@ enum abstract ChargedActionId(Int) to Int {
 }
 
 interface IDamageable {
-	
+	public function onTakeDamage(damage : Float) : Void;
 }
 
 interface IHealth {
-	
+	public var health:Float;
 }

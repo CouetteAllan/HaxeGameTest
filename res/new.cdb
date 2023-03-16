@@ -1,0 +1,39 @@
+{
+	"sheets": [
+		{
+			"name": "Enemies",
+			"columns": [
+				{
+					"typeStr": "0",
+					"name": "id"
+				},
+				{
+					"typeStr": "1",
+					"name": "name",
+					"display": null
+				},
+				{
+					"typeStr": "7",
+					"name": "image",
+					"display": null
+				}
+			],
+			"lines": [
+				{
+					"id": "cube_red",
+					"name": "RedCube",
+					"image": "90514cb71a5c28f2c3ae972a1742453c"
+				},
+				{
+					"id": "rectangle_yellow",
+					"name": "YellowRectangle",
+					"image": "c253d72551587d18089aa4de76e8ee12"
+				}
+			],
+			"separators": [],
+			"props": {}
+		}
+	],
+	"customTypes": [],
+	"compress": false
+}
