@@ -9,4 +9,10 @@ class Enemy extends Entity{
 
 
     }
+
+    override function onDamage(dmg:Int, from:Entity) {
+        super.onDamage(dmg, from);
+        //Do some graph effects and feedback
+        setSquashY(0.5);
+    }
 }

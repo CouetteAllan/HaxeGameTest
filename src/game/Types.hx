@@ -7,6 +7,8 @@ enum abstract GameAction(Int) to Int {
 
 	var Jump;
 	var Restart;
+	var Attack;
+	var Dash;
 
 	var MenuUp;
 	var MenuDown;
@@ -27,6 +29,7 @@ enum abstract GameAction(Int) to Int {
 enum abstract State(Int) {
 	var Normal;
 	var Angry;
+	var LowHealth;
 }
 
 
@@ -36,6 +39,12 @@ enum abstract Affect(Int) {
 	var Poison;
 	var Healing;
 	var Ice;
+}
+
+
+enum abstract ItemType(Int){
+	var Potion;
+	var DamageBonus;
 }
 
 enum abstract LevelMark(Int) to Int {
@@ -52,12 +61,9 @@ enum abstract SlowMoId(Int) to Int {
 
 enum abstract ChargedActionId(Int) to Int {
 	var CA_Unknown;
+	var CA_Attack;
 }
 
-interface IDamageable {
-	public function onTakeDamage(damage : Float) : Void;
-}
 
-interface IHealth {
-	public var health:Float;
-}
+
+

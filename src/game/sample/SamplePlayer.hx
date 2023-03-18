@@ -29,8 +29,8 @@ class SamplePlayer extends Entity {
 		vBase.setFricts(0.84, 0.94);
 
 		// Camera tracks this
-		camera.trackEntity(this, false);
-		camera.clampToLevelBounds = true;
+		// camera.trackEntity(this, false);
+		// camera.clampToLevelBounds = true;
 
 		// Init controller
 		//ca = App.ME.controller.createAccess();
